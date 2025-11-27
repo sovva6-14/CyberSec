@@ -143,7 +143,7 @@ sudo apt install isc-dhcp-server fail2ban ntp vsftpd iptables traceroute -y >/de
 ```
 traceroute 10.0.2.15 #указывается адрес машины
 ```
-![traceroute](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/Module%202/3.png?token=GHSAT0AAAAAADQFG3C3DH3AI5KKYJ5QH7GA2JIR7PQ)
+![traceroute](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/Module%202/1.png?token=GHSAT0AAAAAADQFG3C2BIFSVSFP3UMWHCBS2JISG4Q)
 
 В третьей части меняем порт SSH с 22 на 7777
 
@@ -224,6 +224,7 @@ then
   cd ${source}
   tar zcf ${destination_root}/archive/samba_${fdate}.tar.gz ./*
 fi
+
 ```
 В последней части идет работа с systemctl. Старт и перезапуск служб
 
