@@ -29,7 +29,7 @@
 
 Необходимо выставить "Внутренняя сеть" в "Адаптер 2" в настройках VB "Сеть" на двух машинах
 
-![Внутренняя сеть](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/Module%202/1.png?token=GHSAT0AAAAAADQFG3C3I4PD2HHFJTTFEEDU2JIR6UA)
+![Внутренняя сеть](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/Module%202/1.png?token=GHSAT0AAAAAADQFG3C3ATLFZQWRYTT5TAYW2JISH6Q)
 
 Код скрипта:
 
@@ -143,7 +143,7 @@ sudo apt install isc-dhcp-server fail2ban ntp vsftpd iptables traceroute -y >/de
 ```
 traceroute 10.0.2.15 #указывается адрес машины
 ```
-![traceroute](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/Module%202/1.png?token=GHSAT0AAAAAADQFG3C2BIFSVSFP3UMWHCBS2JISG4Q)
+![traceroute](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/Module%202/3.png?token=GHSAT0AAAAAADQFG3C2AIJRTDHPB6IF3NRS2JISIKA)
 
 В третьей части меняем порт SSH с 22 на 7777
 
