@@ -80,19 +80,46 @@ DLP-системы и операционной системы.
 
 ![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/14.png?token=GHSAT0AAAAAADQFG3C3PUK6ABHRFKMEAOIW2JNZ74A)
 
-Далее запустить программу SearchInform AlertCenter Client, который находится в папке "Клиенты" на рабочем столе. После успешного входа необходимо сменить пароль. Нужно нажать на Файл -> Авторизация и указать новый пароль и повторно ввести его в поле "Новый повторно". После ввода нового пароля нажать "Применить"
+Далее запустить программу SearchInform AlertCenter Client, который находится в папке "Клиенты" на рабочем столе. После успешного входа необходимо сменить пароль. Нужно нажать на Файл -> Авторизация и указать новый пароль и повторно ввести его в поле "Новый повторно". После ввода нового пароля нажать "Применить". Появляется окно с информацией, что новый пароль успешно установлен. Можно закрыть программу.
 
 ![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/15.png?token=GHSAT0AAAAAADQFG3C2WZWSZP6G4UCT3TI62JN2DZQ)
 
+Запустить программу Search Server Console из папки Консоли. Запущен сервер, перейти в раздел Индексы. Нажать на первый в списке, на Fingerprint_01. Перейти во вкладку "Права доступа" и "Назначить разрешения".
 
+![Установка разрешений](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/16.png?token=GHSAT0AAAAAADQFG3C2NS7IHJKS5BA6PTCK2JN26YA)
 
+Выбрать чекбокс "Использовать специальные права доступа", нажать "Добавить" слева внизу окна. В появившемся окне нажать на кнопку "Дополнительно". В появившемся еще окне нажать на кнопку "Поиск" и выбрать в результате поиска пользователя с именем "Администратор". Нажать "ОК".
 
+![Ограничение прав](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/17.png?token=GHSAT0AAAAAADQFG3C36VEN4FC46ALTKNPQ2JN3B4A)
 
+Теперь на этом объекте указан назначенный пользователь.
 
+![Установленный пользователь](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/18.png?token=GHSAT0AAAAAADQFG3C3B6YKKSXZSIY7N4GK2JN3DOQ)
 
+Далее необхидимо нажать Пуск -> Настройка -> Панель управления -> Администрирование -> Службы. Найти запущенную службу SearchInform Alert Center Service и перейти в свойства.
 
+![Служба SearchInform Alert Center Service](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/19.png?token=GHSAT0AAAAAADQFG3C2KXXYDCCO6UNCSO3S2JN3KBQ)
 
+В свойствах перейти на вкладку "Вход в систему". Выбрать чекбокс "С учетной записью", нажать Обзор -> Дополнительно -> Поиск и выбрать в результате поиска пользователя "Администратор". Нажать "ОК". На вкладке "Вход в систему" указать настоящий пароль. Получаем информационное окно что выбранной учетной записи было предоставлено право входа в качестве службы.
 
+![Уведомление](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/20.png?token=GHSAT0AAAAAADQFG3C2RDYK4U3O5BXBVQOE2JN3OJA)
+
+По такой же аналогии настроить следующие службы:
+
+- SearchInform DataCenter: agent
+- DataCenter: server
+- DeviceSniffer Server
+- NetworkSniffer
+- SearchInform NetworkSniffer Mail servers integration
+- SearchInform Regular Expressions server
+- SearchInform ReportCenter: synchronization service
+- SoftInform Search Server
+- SQL Server (MSSQLSERVER)
+- SQL Server VSS Writer 
+
+Открыть папку Консоли и запустить программу SearchInform AlertCenter и нажать на кнопку "Проверить"
+
+![Кнопка Проверить AlertCenter](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/21.png?token=GHSAT0AAAAAADQFG3C3DA2S2T3H7NTXJUSW2JN3UPA)
 
 
 
