@@ -36,7 +36,7 @@ DLP-системы и операционной системы.
 
 ![Папка Консоли](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/4.png?token=GHSAT0AAAAAADQFG3C3ETNJAO7YEEXDS5E22JNZBBA)
 
-Для того, чтобы можно было успешно открыть программу, необходимо выставить 2012 год в настройках времени машины. После открытия программы нужно ввести пароль "Admin". После того, как пароль введен, вход будет успешно осуществлен.
+Для того, чтобы можно было успешно открыть программу, необходимо выставить 2012 год в настройках времени запущенной виртульной машины. После открытия программы нужно ввести пароль "Admin". После того, как пароль введен, вход будет успешно осуществлен.
 
 ![Вход в программу](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/5.png?token=GHSAT0AAAAAADQFG3C2FK7TFIYFNSS2RKCW2JNZI5A)
 
@@ -53,4 +53,48 @@ DLP-системы и операционной системы.
 Запустить программу SearchInform DataCenter, она также находится в папке Консоли. Ввести пароль "Admin".
 
 ![Программа SearchInform DataCenter](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/8.png?token=GHSAT0AAAAAADQFG3C2E62TC4CAD4ERGJX62JNZNJA)
+
+В открывшейся программе нажать "Остановить" и "Сменить пароль".
+
+![Остановка и смена пароля DataCenter](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/9.png?token=GHSAT0AAAAAADQFG3C2P7BR265CUX2Q7EE62JNZQFA)
+
+В окне для смены пароля ввести старый пароль "Admin" и указать новый пароль.
+
+![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/10.png?token=GHSAT0AAAAAADQFG3C3K2BZBHU4BICRJQSK2JNZSXA)
+
+Нажать на кнопку "Запустить" для запуска сервера. После этого можно закрыть программу.
+
+![Запуск](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/11.png?token=GHSAT0AAAAAADQFG3C2FJPPXK37T67ZIPGI2JNZT7Q)
+
+Запустить программу SearchInform EndpointSniffer, также из папки "Консоли". Пароль вводить "Admin" для входа в программу. После успешного входа необходимо также сменить пароль.
+
+Нужно нажать на Опции -> Изменить пароль. В поле "Пароль" ввести старый пароль. В "Новый пароль" и "Подверждение" указать новый пароль. Нажать "ОК". После этого можно закрыть программу.
+
+![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/12.png?token=GHSAT0AAAAAADQFG3C3DVHYBZLL572JR7CG2JNZYCQ)
+
+Теперь нужно открыть программу SearchInform NetworkSniffer: Administrator console. Для входа также использовать пароль "Admin". После успешного входа необходимо сменить пароль. Нажать Опции -> Изменить пароль. Ввести новый пароль и нажать "ОК". После этого можно закрыть программу.
+
+![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/13.png?token=GHSAT0AAAAAADQFG3C3ZKBY5KO5KWELD23G2JNZ3KQ)
+
+Далее запустить программу SearchInform ReportCenter. Вход в программу под паролем "Admin". После успешного входа необходимо сменить пароль. Нажать на значок ключа и подписано "Сменить пароль". Указать старый пароль и новый, нажать "ОК". После этого можно закрыть программу.
+
+![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/14.png?token=GHSAT0AAAAAADQFG3C3PUK6ABHRFKMEAOIW2JNZ74A)
+
+Далее запустить программу SearchInform AlertCenter Client, который находится в папке "Клиенты" на рабочем столе. После успешного входа необходимо сменить пароль. Нужно нажать на Файл -> Авторизация и указать новый пароль и повторно ввести его в поле "Новый повторно". После ввода нового пароля нажать "Применить"
+
+![Смена пароля](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/15.png?token=GHSAT0AAAAAADQFG3C2WZWSZP6G4UCT3TI62JN2DZQ)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
