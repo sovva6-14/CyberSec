@@ -117,10 +117,19 @@ DLP-системы и операционной системы.
 - SQL Server (MSSQLSERVER)
 - SQL Server VSS Writer 
 
-Открыть папку Консоли и запустить программу SearchInform AlertCenter и нажать на кнопку "Проверить"
+Открыть папку Консоли и запустить программу SearchInform AlertCenter и нажать на кнопку "Проверить".
 
 ![Кнопка Проверить AlertCenter](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/21.png?token=GHSAT0AAAAAADQFG3C3DA2S2T3H7NTXJUSW2JN3UPA)
 
+Появляется уведомление, что проверка соединения завершена успешно. Нажать "ОК".
+
+![Проверка](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/22.png?token=GHSAT0AAAAAADQFG3C3O36ZLQKMU2Y4WK4S2JN3WZQ)
+
+В Параметры подключения к базе данных нажать на кнопку "Настройка". В открывшемся окне выбрать базу данных в выпадающем списке alercenter_3 и нажать на кнопку "ОК". Нажать на вкладку "Сервер AlertCenter" и выставить Уровень логирования работы службы на "Нормальный".
+
+Нажать на кнопку "Запустить сервер". Нажать на кнопку "Закрыть".
+
+![Кнопка запустить сервер](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/ЗИС%204%20лабораторная/23.png?token=GHSAT0AAAAAADQFG3C2GFM34UF5DLUSDLAY2JN33OQ)
 
 
 
