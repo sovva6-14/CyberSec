@@ -15,6 +15,8 @@
 
 Необходимо создать 3 машины на Debian (Роутер, Сервер, Клиент)
 
+![VM](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/pfa/4.png)
+
 Роутер имеет адрес - 192.168.0.227
 Сервер имеет адрес - 192.168.0.221
 Клиент имеет адрес - 192.168.0.226
@@ -284,25 +286,145 @@ sudo ansible-playbook -i hosts.ini lab_setup.yml
 
 И видим, что плейбук успешно запущен
 
-добавить скрин 1
+![ansible](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/pfa/1.png)
 
 Проверить открытые порты на других машинах командой
 
 ```
 ss -tulnp
 ```
-добавить скрин 2
+![ports](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/pfa/2.png)
 
 
-<h3>Установка Puppet</h3>
+<h3>Настройка Puppet</h3>
+
+Скачиваем через команду <b>wget</b>
 
 ```
 wget https://apt.puppetlabs.com/puppet-release-bullseye.deb
 ```
 
+Далее создаем манифест
 
+```
+# Определение классов
+class base {
+  # Обновление пакетов
+  exec { 'apt-update':
+    command => '/usr/bin/apt update',
+    refreshonly => true,
+  }
+  
+  # Установка основных пакетов
+  package { ['wget', 'curl', 'vim', 'htop']:
+    ensure => installed,
+    require => Exec['apt-update'],
+  }
+}
 
+class telnet_server {
+  package { 'telnetd':
+    ensure => installed,
+    require => Exec['apt-update'],
+  }
+  
+  service { 'inetd':
+    ensure => running,
+    enable => true,
+    require => Package['telnetd'],
+  }
+  
+  # Настройка telnet (только для внутренней сети)
+  file { '/etc/inetd.conf':
+    ensure  => present,
+    content => "telnet stream tcp nowait telnetd /usr/sbin/tcpd /usr/sbin/in.telnetd -h",
+    require => Package['telnetd'],
+    notify  => Service['inetd'],
+  }
+}
 
+class ssh_server {
+  package { 'openssh-server':
+    ensure => installed,
+    require => Exec['apt-update'],
+  }
+  
+  service { 'ssh':
+    ensure => running,
+    enable => true,
+    require => Package['openssh-server'],
+  }
+  
+  # Базовая настройка SSH
+  file { '/etc/ssh/sshd_config':
+    ensure  => present,
+    content => template('ssh/sshd_config.erb'),
+    require => Package['openssh-server'],
+    notify  => Service['ssh'],
+  }
+}
 
+class xrdp_server {
+  package { ['xrdp', 'xorgxrdp']:
+    ensure => installed,
+    require => Exec['apt-update'],
+  }
+  
+  service { 'xrdp':
+    ensure => running,
+    enable => true,
+    require => Package['xrdp'],
+  }
+  
+  service { 'xrdp-sesman':
+    ensure => running,
+    enable => true,
+    require => Package['xrdp'],
+  }
+}
 
+# Применение классов
+include base
+include telnet_server
+include ssh_server
+include xrdp_server
 
+```
+
+Создаем SSH конфиг <b>sshd_config.erb</b>
+
+```
+# /etc/ssh/sshd_config
+Port 22
+Protocol 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Аутентификация
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication yes
+PermitEmptyPasswords no
+
+# Настройки безопасности
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
+```
+
+Запускаем через команду 
+
+```
+sudo puppet apply services.pp
+```
+![puppet](https://raw.githubusercontent.com/sovva6-14/CyberSec/refs/heads/main/Img/pfa/3.png)
+
+И перезапустить службы через команды
+
+```
+sudo systemctl status ssh
+sudo systemctl status xrdp
+sudo systemctl status inetd
+```
